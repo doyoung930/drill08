@@ -29,9 +29,10 @@ class Ball:
     def __init__(self):
         self.x, self.y = random.randint( 50, 750 ), 599
         self.image = load_image('ball21x21.png')
+        self.speed = random.randint(5, 20)
     def update(self):
         if self.y > 50:
-            self.y -= random.randint(5, 20)
+            self.y -= self.speed
     def draw(self):
         self.image.draw(self.x, self.y)
 
@@ -39,9 +40,10 @@ class Ball2:
     def __init__(self):
         self.x, self.y = random.randint( 50, 750 ), 599
         self.image = load_image('ball41x41.png')
+        self.speed = random.randint( 5, 20 )
     def update(self):
         if self.y > 50:
-            self.y -= random.randint( 5, 20 )
+            self.y -= self.speed
 
     def draw(self):
         self.image.draw(self.x, self.y)
